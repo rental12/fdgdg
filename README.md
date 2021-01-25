@@ -28,6 +28,12 @@ wsl.exe --set-default-version 2
 To install Ubuntu windows, head over to the Microsoft store and search for Ubuntu (the one without any version eg 1804) and click install. After installation is complete, open up Ubuntu and set your sudo password. We will stop here for now to install the Nvidia drivers necessary for later part.
 
 ## Install Nvidia Drivers
+Before continuing, Nvidia driver support for WSL2 has to be installed in your host pc (windows). To do so , visit https://developer.nvidia.com/cuda/wsl/download and click on the appropriate drivers to download depending on what type of gpu you have. To check if the installation is successful, you can download the nvidia driver inside WSL2 ubuntu by installing the nvidia-utils. Check the version to install by typing nvidia-smi and since nvidia-smi is not installed, you will be prompted to install nvidia utils. Check for the appropriate version in my case i download via
+```bash
+sudo apt install nvidia-utils-435
+```
+
+## Install docker in wsl2
 
  
 
