@@ -1,6 +1,6 @@
 # GPU pass through Docker WSL2 
 
-With the recent addition of gpu pass through support from nvidia, it is now possible to run your container with gpu support. 
+With the recent addition of gpu pass through support from nvidia, it is now possible to run your container with gpu support. This guide will run Headpose estimation with docker
 
 ## Installing Developer Windows
 
@@ -61,6 +61,18 @@ finally restart wsl2 ubuntu
 wsl.exe --shutdown Ubuntu
 ```
 
-##
+## Test WSL2
+Pull image by running
+```bash
+docker pull limzixiong/ubuntupytorch:v3
+```
+start docker daemon
+```bash 
+dockerd
+```
+Start containers with gpu support
+```bash
+docker run -it --gpus all limzixiong/ubuntupytorch:v3
+```
  
 
